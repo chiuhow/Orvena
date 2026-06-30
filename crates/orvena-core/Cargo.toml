@@ -1,0 +1,17 @@
+[package]
+name = "orvena-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Core library for Orvena — a config-first, governed, measurable coding agent. All logic lives here so it can be embedded by a larger AI runtime."
+
+[dependencies]
+tokio.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+async-trait.workspace = true

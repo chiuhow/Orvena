@@ -1,0 +1,16 @@
+# Gates: a change is "done" only when it passes these.
+#   condition   — human-readable definition of done
+#   verify      — a command run for observable evidence (exit 0 = pass)
+#   gatekeeper  — automated (evidence decides) or human (escalates, stops loop)
+
+gates:
+  - name: tests-pass
+    condition: Project checks pass
+    verify: "true"          # replace with your test command, e.g. "cargo test" / "pytest -q"
+    gatekeeper: automated
+
+# Example human gate — uncomment for engineering tier / high-risk changes.
+# A human gate stops the loop and reports a blocker for you to resolve.
+# - name: human-review
+#   condition: A human reviewed architectural changes
+#   gatekeeper: human

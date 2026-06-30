@@ -1,0 +1,10 @@
+# Per-role context budgets. Context is a budget, not an unbounded window:
+# high-value items load first and the rest is trimmed when the budget is reached.
+
+default_max_tokens: 8000
+
+budgets:
+  - role: developer
+    max_tokens: 8000
+  - role: reviewer
+    max_tokens: 4000

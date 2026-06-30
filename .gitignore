@@ -1,0 +1,11 @@
+# Prepared ahead of A4 (git init happens only after v0.1 passes the boundary check).
+/target
+**/*.rs.bk
+
+# Secrets never enter git — API keys live in .env only.
+.env
+.env.*
+!.env.example
+
+# Project-local scaffold deployed by `orvena init` into a user's repo.
+.orvena/

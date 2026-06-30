@@ -1,0 +1,19 @@
+[package]
+name = "orvena-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Orvena CLI — a thin frontend over orvena-core."
+
+[[bin]]
+name = "orvena"
+path = "src/main.rs"
+
+[dependencies]
+orvena-core = { path = "../orvena-core" }
+tokio.workspace = true
+clap.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_yaml.workspace = true

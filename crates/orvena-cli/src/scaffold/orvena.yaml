@@ -1,0 +1,20 @@
+# Orvena project config. Behavior is driven by these files (config-first) —
+# edit them to adapt Orvena to your project; no code changes required.
+#
+# `orvena init` sets `provider` for you after you pick one. There is no silent
+# default: if the key for your provider is missing, `orvena doctor` tells you.
+
+provider:
+  kind: anthropic          # anthropic | openai | openrouter | ollama | offline
+  model: claude-opus-4-8   # a model your chosen provider serves
+  # base_url:              # optional endpoint override
+
+# Governance tier (discipline scales with risk):
+#   light       — scope lock & gates are advisory (warn)
+#   engineering — scope lock & gates are hard-enforced (block)
+tier: light
+
+default_role: developer
+
+# Upper bound on loop attempts (bounded autonomy).
+max_steps: 3
